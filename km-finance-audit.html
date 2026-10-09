@@ -229,7 +229,7 @@ function hideLoginBuffer(){
 function showBuffer(message='Loading...'){showLoginBuffer(message)}
 function hideBuffer(){hideLoginBuffer()}
 
-const SCRIPT_URL='https://script.google.com/macros/s/AKfycbyPpI27VQqpIrZHn8mizmONCLHEbp_aJj_wnan6nyYh-0R2bNW_C7qbYuAHQvRgwS5_fg/exec';
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbzTJ17EfiuTqLHif-ByShqSHv-o2ToRC1KhFcDgc5CVVDuVdrObGzSM4kUqz98FdfBX1g/exec';
 const $=id=>document.getElementById(id); let managementToken=sessionStorage.getItem('tmx_km_finance_token')||'', managementName=sessionStorage.getItem('tmx_km_finance_name')||''; let trips=[]; let filterCombos=[]; let configEngineers=[]; let photosVisible=localStorage.getItem('finance_portal_photos')!=='0';
 function toast(s){const e=$('toast');e.textContent=s;e.style.display='block';clearTimeout(window._tt);window._tt=setTimeout(()=>e.style.display='none',2600)}
 async function post(action,extra={}){const r=await fetch(SCRIPT_URL,{method:'POST',body:JSON.stringify({action,managementToken,...extra})});const text=await r.text();let d;try{d=JSON.parse(text)}catch(e){throw Error('bad-response')}if(!d.ok)throw Error(d.error||'server-error');return d}
@@ -579,7 +579,7 @@ function portalSSOStatus_(title,detail){ document.documentElement.classList.remo
 
 <script id="v8323UnifiedPortalLogout">
 (function(){
- const PORTAL_LOGIN='https://tmxportal.vercel.app/?logout=1';
+ const PORTAL_LOGIN='https://telecomaxportal.vercel.app/?logout=1';
  function isLogoutTarget(el){
    const b=el&&el.closest?el.closest('button,a'):null;if(!b)return false;
    const id=String(b.id||'').toLowerCase(),txt=String(b.textContent||'').trim().toLowerCase();

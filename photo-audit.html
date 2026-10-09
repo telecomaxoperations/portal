@@ -481,7 +481,7 @@ function hideLoginBuffer(){
 function showBuffer(message='Loading...'){showLoginBuffer(message)}
 function hideBuffer(){hideLoginBuffer()}
 
-const URL='https://script.google.com/macros/s/AKfycbyPpI27VQqpIrZHn8mizmONCLHEbp_aJj_wnan6nyYh-0R2bNW_C7qbYuAHQvRgwS5_fg/exec', $=id=>document.getElementById(id);let managementToken=sessionStorage.getItem('tmx_km_admin_token')||sessionStorage.getItem('tmx_km_pm_token')||'', managementName=sessionStorage.getItem('tmx_km_admin_name')||sessionStorage.getItem('tmx_km_pm_name')||'', combos=[], engineers=[], drivers=[], rentTrips=[];
+const URL='https://script.google.com/macros/s/AKfycbzTJ17EfiuTqLHif-ByShqSHv-o2ToRC1KhFcDgc5CVVDuVdrObGzSM4kUqz98FdfBX1g/exec', $=id=>document.getElementById(id);let managementToken=sessionStorage.getItem('tmx_km_admin_token')||sessionStorage.getItem('tmx_km_pm_token')||'', managementName=sessionStorage.getItem('tmx_km_admin_name')||sessionStorage.getItem('tmx_km_pm_name')||'', combos=[], engineers=[], drivers=[], rentTrips=[];
 function toast(s){$('toast').textContent=s;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2500)}async function post(action,x={}){let r=await fetch(URL,{method:'POST',body:JSON.stringify({action,managementToken,...x})}),t=await r.text(),d;try{d=JSON.parse(t)}catch(e){throw Error('bad-response')}if(!d.ok)throw Error(d.error||'server-error');return d}function money(n){return (Number(n)||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})+' EGP'}function today(){let d=new Date(),o=d.getTimezoneOffset();return new Date(d-o*60000).toISOString().slice(0,10)}
 function auth(on){
  $('login').style.display='none';
@@ -1070,7 +1070,7 @@ window.addEventListener('pageshow',applyAuditPhotoVisibility);
 
 <script id="v8323UnifiedPortalLogout">
 (function(){
- const PORTAL_LOGIN='https://tmxportal.vercel.app/?logout=1';
+ const PORTAL_LOGIN='https://telecomaxportal.vercel.app/?logout=1';
  function isLogoutTarget(el){
    const b=el&&el.closest?el.closest('button,a'):null;if(!b)return false;
    const id=String(b.id||'').toLowerCase(),txt=String(b.textContent||'').trim().toLowerCase();

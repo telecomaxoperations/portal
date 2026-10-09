@@ -565,7 +565,7 @@ html.portal-sso-pending body::before,html.tmx-auth-resolving body::before{conten
 <script>
 // Apps Script web app URL (Deploy > Manage deployments). Keep the same URL by always using "Edit > New version".
 // Leave empty ('') to go back to the Vercel proxy at /api/backend.
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbxE2_an7yy_3pfaG_rShM_gBc0QTLeTN7pvn6bJ-BWPFei2Wst4N9XKiVg0dQZNHZhA/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbz09128bUHKXBxb4F4jNztEePYA4mMfwQAbO6dpispgJVq5d3D8qNTlcCX5SVi5M9ZcVw/exec';
 const API = GAS_URL || '/api/backend';
 let engineerToken = null;
 let adminToken = null;
@@ -1162,7 +1162,7 @@ function portalSSOStatus_(title,detail){ document.documentElement.classList.remo
 
 <script id="v8323UnifiedPortalLogout">
 (function(){
- const PORTAL_LOGIN='https://tmxportal.vercel.app/?logout=1';
+ const PORTAL_LOGIN='https://telecomaxportal.vercel.app/?logout=1';
  function isLogoutTarget(el){
    const b=el&&el.closest?el.closest('button,a'):null;if(!b)return false;
    const id=String(b.id||'').toLowerCase(),txt=String(b.textContent||'').trim().toLowerCase();
